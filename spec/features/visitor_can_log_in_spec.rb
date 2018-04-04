@@ -21,14 +21,14 @@ describe "As a visitor" do
       expect(page).to have_content('logout')
     end
 
-    def "they can log out" do
+    it "they can log out" do
       stub_omniauth
 
       visit dashboard_path
 
       click_on "logout"
 
-      expect(current_path).to equal('/')
+      expect(current_path).to eq('/')
       expect(page).to have_content('Sign Up/Sign In')
       expect(page).to_not have_content('logout')
     end
@@ -52,8 +52,3 @@ describe "As a visitor" do
     end
   end
 end
-# When they visit '/'
-# And click on Sign Up/Sign In
-# And they authorize login with facebook
-# Then they see 'Login Successful'
-# And they see a feed of instagram posts by National Parks
