@@ -6,6 +6,7 @@ h1 {
     font-size: 43px;
     margin: 0 0 23px 0;
     }
+
 h2 {
     font-family: 'Cantarell', sans-serif;
     font-weight: 700;
@@ -15,9 +16,17 @@ h2 {
     letter-spacing: -1px;
     margin: 0 0 23px 0;
     }
+
 p {
     font-family: 'Cantarell', sans-serif;
     font-size: 17px;
     line-height: 23px;
     margin: 0 0 23px 0;
     }
+
+
+.cover-image {
+  height: -webkit-fill-available;
+  background-image: url('dash-background.jpg');
+  background-size: cover;
+}
