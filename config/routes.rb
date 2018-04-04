@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   get 'auth/:provider/callback',  to: 'sessions#create'
   get '/lougout', to: 'sessions#destroy'
+
+  get '/dashboard', as: 'dashboard', to: 'dashboard#index'
 end
