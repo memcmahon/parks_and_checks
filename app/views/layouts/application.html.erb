@@ -6,9 +6,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans|Dosis:400,800" rel="stylesheet" type="text/css" />
   </head>
 
-  <body>
+  <body class="m0">
+    <%= flash[:message] %>
     <%= yield %>
   </body>
 </html>
