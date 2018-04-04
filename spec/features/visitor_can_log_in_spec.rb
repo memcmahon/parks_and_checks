@@ -21,6 +21,18 @@ describe "As a visitor" do
       expect(page).to have_content('logout')
     end
 
+    def "they can log out" do
+      stub_omniauth
+
+      visit dashboard_path
+
+      click_on "logout"
+
+      expect(current_path).to equal('/')
+      expect(page).to have_content('Sign Up/Sign In')
+      expect(page).to_not have_content('logout')
+    end
+
     def stub_omniauth
       OmniAuth.config.test_mode = true
       OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
