@@ -17,11 +17,14 @@ describe "As a visitor" do
       click_on "Sign Up/Sign In"
 
       expect(current_path).to eq('/dashboard')
-      expect(page).to have_content('Currently logged in as Megan McMahon')
+      expect(page).to have_content('Megan McMahon')
       expect(page).to have_content('logout')
     end
 
     it "they can log out" do
+      user = create(:user)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
       stub_omniauth
 
       visit dashboard_path
