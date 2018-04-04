@@ -16,7 +16,9 @@ describe "As a visitor" do
 
       click_on "Sign Up/Sign In"
 
-
+      expect(current_path).to eq('/dashboard')
+      expect(page).to have_content('Currently logged in as Megan McMahon')
+      expect(page).to have_content('logout')
     end
 
     def stub_omniauth
