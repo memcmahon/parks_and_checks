@@ -10,41 +10,32 @@ describe "As a visitor" do
       expect(page).to have_content("Park Login")
     end
 
-    it "they can log in with facebook" do
+    it "they can log in with google" do
+      stub_omniauth
       visit root_path
 
       click_on "Sign Up/Sign In"
 
+
     end
 
     def stub_omniauth
-    OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
-  provider: 'facebook',
-  uid: '1234567',
-  info: {
-    email: 'mcmahon.meganelizabeth@gmail.com',
-    name: 'Megan McMahon',
-    first_name: 'Megan',
-    last_name: 'McMahon',
-    image: 'http://graph.facebook.com/1234567/picture?type=square',
-    verified: true
-  },
-  credentials: {
-    token: 'ABCDEF',
-    expires_at: 1321747205,
-    expires: true
-  },
-  extra: {
-    raw_info: {
-      id: '1234567',
-      name: 'Joe Bloggs',
-      first_name: 'Joe',
-      last_name: 'Bloggs'
-    }
-  }
-})
-  end
+      OmniAuth.config.test_mode = true
+      OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+        provider: "google",
+        uid: "12345678910",
+        info: {
+          email: "mcmahon.meganelizabeth@gmail.com",
+          first_name: "Megan",
+          last_name: "McMahon"
+        },
+        credentials: {
+          token: "abcdefg12345",
+          refresh_token: "12345abcdefg",
+          expires_at: DateTime.now,
+        }
+      })
+    end
   end
 end
 # When they visit '/'
