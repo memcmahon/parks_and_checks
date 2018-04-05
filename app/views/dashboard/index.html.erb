@@ -1,1 +1,11 @@
 <%= render partial: './navbar' %>
+
+<section class="images">
+  <% @images.each do |image| %>
+    <div class="image">
+      <%= @image.park %>
+      <%= image_tag "@image.url" %>
+      <%= @image.description %>
+    </div>
+  <% end %>
+</section>
