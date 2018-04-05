@@ -1,3 +1,7 @@
+body {
+  background-color: #eaecff
+}
+
 h1 {
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
@@ -13,19 +17,26 @@ h2 {
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    line-height: 46px;
-    }
 
+    }
+.spacer {
+  height: 4em;
+}
+
+.med-image {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.bg-soft-white {
+  background-color: #ffffffD9;
+}
 
 .cover-image {
   height: -webkit-fill-available;
   background-image: image-url('dash-background.jpg');
   background-size: cover;
-}
-
-.bg-soft-white {
-  background-color: white;
-  opacity: .8;
+  background-color: black;
 }
 
 .bg-soft-blue {
