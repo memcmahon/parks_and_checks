@@ -1,11 +1,14 @@
 <%= render partial: './navbar' %>
+<section class="spacer">
 
-<section class="images">
+</section>
+
+<section class="m0 images col-6 mx-auto">
   <% @images.each do |image| %>
-    <div class="image">
-      <%= @image.park %>
-      <%= image_tag "@image.url" %>
-      <%= @image.description %>
+    <div class="mb1 p1 rounded image bg-soft-white">
+      <h2 class="m0 center block"><%= image.park %></h2>
+      <%= image_tag "#{image.url}", class: "mx-auto block med-image rounded" %>
+      <p class="m1 center block"><%= image.caption %></p>
     </div>
   <% end %>
 </section>
