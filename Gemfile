@@ -19,6 +19,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faraday'
 gem 'figaro'
 gem "omniauth-google-oauth2", "~> 0.2.1"
+gem 'font-awesome-rails'
 
 
 group :development, :test do
