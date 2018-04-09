@@ -1,5 +1,5 @@
 class Image
-  attr_reader :park, :credit, :alt_text, :title, :caption, :url
+  attr_reader :park, :credit, :alt_text, :title, :caption, :url, :park_url
 
   def initialize(park, park_url, info)
     @park = park
