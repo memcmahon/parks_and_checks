@@ -1,8 +1,9 @@
 class Image
   attr_reader :park, :credit, :alt_text, :title, :caption, :url
 
-  def initialize(park, info)
+  def initialize(park, park_url, info)
     @park = park
+    @park_url = park_url
     @credit = info[:credit]
     @alt_text = info[:altText]
     @title = info[:title]
