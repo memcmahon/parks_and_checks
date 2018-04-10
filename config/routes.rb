@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/profile', as: 'profile', to: 'users#show'
   get '/gifts', as: 'gifts', to: 'gifts#index'
   get '/favorites', as: 'favorites', to: 'favorites#index'
+
+  resources :charges, only: [:new, :create]
 end
