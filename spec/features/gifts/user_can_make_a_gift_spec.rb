@@ -8,9 +8,9 @@ describe "As a user" do
 
       visit '/dashboard'
 
-      click_on("Give", match: :first)
+      click_link("give", match: :first)
 
-      expect(page).to have_content("stripe")
+      expect(page).to have_content("Donate: $5.00")
     end
   end
 end

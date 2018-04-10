@@ -1,5 +1,6 @@
 class ChargesController < ApplicationController
   def new
+    @description = params[:park]
   end
 
   def create
@@ -13,9 +14,11 @@ class ChargesController < ApplicationController
     charge = Stripe::Charge.create(
       :customer => customer.id,
       :amount => @amount,
-      :description => "placeholder",
+      :description => params[:description],
       :currency => 'usd'
     )
+
+    redirect_to dashboard_path
 
   rescue Stripe::CardError => e
     flash[:error] = e.message

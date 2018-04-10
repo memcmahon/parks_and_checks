@@ -9,7 +9,7 @@
       <h2 class="m0 center block"><%= image.park %></h2>
       <%= link_to image_tag("#{image.url}", class: "mx-auto block med-image rounded"), image.park_url, target: :_blank %>
       <div class="icon-box">
-        <%= link_to fa_icon("dollar", class: "mr3 mt1 right"), new_charge_path %>
+        <%= link_to fa_icon("dollar", class: "mr3 mt1 right"), new_charge_path(park: "#{image.park}"), id: "give" %>
       </div>
       <p class="m1 center block"><%= image.caption %></p>
     </div>
