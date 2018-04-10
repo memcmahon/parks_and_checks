@@ -10,12 +10,7 @@ describe "As a user" do
 
       click_link("give", match: :first)
 
-      expect(page).to have_content("Amount: $5.00")
-      save_and_open_page
-
-      click_on("submit")
-
-      expect(page).to have_content("hlskdf")
+      expect(page).to have_content("Donate: $5.00")
     end
   end
 end
