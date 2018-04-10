@@ -1,19 +1,25 @@
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
+
+<section class="clear-fix">
+  <div class="col-4 mx-auto center bg-white rounded">
+    <%= form_tag charges_path(description: @description) do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <label class="amount">
+          <span><h2>Donate: $5.00</h2></span>
+        </label>
+      </article>
+      <div class="pb2">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button mb2"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description = "<%= @description %>"
+                data-amount="500"
+                data-locale="auto">
+        </script>
       </div>
     <% end %>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
-  </article>
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description = "placeholder"
-          data-amount="500"
-          data-locale="auto">
-  </script>
-<% end %>
+  </div>
+</section>
