@@ -20,16 +20,16 @@ p {
 
     }
 .spacer {
-  height: 4em;
+  height: 5em;
 }
 
 .icon-box {
-  height: 2em;
+  height: 5em;
 }
 
 .med-image {
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 90%;
+  max-width: 90%;
 }
 
 .bg-soft-white {
@@ -45,4 +45,30 @@ p {
 
 .bg-soft-blue {
   background-color: #A6ABDD;
+}
+
+.gift-hover {
+  background-color: pink;
+}
+
+.gift-wrapper {
+  position: relative;
+}
+
+.centered {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffffD9;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.big-icon {
+  position: absolute;
+  top: 40%;
+  font-size: 60px;
 }

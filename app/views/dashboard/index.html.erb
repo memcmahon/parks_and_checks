@@ -6,10 +6,12 @@
 <section class="m0 images col-6 mx-auto">
   <% @images.each do |image| %>
     <div class="mb1 p1 rounded image bg-soft-white">
-      <h2 class="m0 center block"><%= image.park %></h2>
-      <%= link_to image_tag("#{image.url}", class: "mx-auto block med-image rounded"), image.park_url, target: :_blank %>
-      <div class="icon-box">
-        <%= link_to fa_icon("dollar", class: "mr3 mt1 right"), new_charge_path(park: "#{image.park}"), id: "give" %>
+      <h2 class="m0 center block"><%=link_to image.park, image.park_url, target: :_blank, class: "text-decoration-none black" %></h2>
+      <div class="gift-wrapper">
+        <%= image_tag "#{image.url}", class: "mx-auto block med-image rounded" %>
+        <div class="centered">
+          <h2><%= link_to fa_icon("dollar", class: "big-icon center"), new_charge_path(park: "#{image.park}"), class: "text-decoration-none black", id: "give" %></h2>
+        </div>
       </div>
       <p class="m1 center block"><%= image.caption %></p>
     </div>
