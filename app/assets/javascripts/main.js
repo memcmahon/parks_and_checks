@@ -4,4 +4,4 @@ $('.gift-wrapper', function() {
 
 $('.gift-wrapper').on('mouseenter mouseleave', function() {
   $('.centered').toggle()
-})
+});

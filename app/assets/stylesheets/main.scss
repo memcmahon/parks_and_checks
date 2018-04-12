@@ -14,6 +14,14 @@ h2 {
     font-size: 18px;
     line-height: 46px;
     }
+
+h3, button {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 46px;
+    }
+    
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -71,4 +79,48 @@ p {
   position: absolute;
   top: 40%;
   font-size: 60px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    // padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E7EBF1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ffffffD9}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #E7EBF1;
 }
