@@ -1,7 +1,12 @@
-<nav class="m0 col-12 right bg-white fixed z2">
-  <h2 class="m1 mr3 right inline"><%= link_to 'logout', '/logout', class: "text-decoration-none black" %></h2>
-  <h2 class="m1 right inline"><%= link_to "#{current_user.name}", '/profile', class: "text-decoration-none black" %></h2>
-  <h2 class="m1 right inline"><%= link_to "Favorites", '/favorites', class: "text-decoration-none black" %></h2>
-  <h2 class="m1 right inline"><%= link_to "Gifts", '/gifts', class: "text-decoration-none black" %></h2>
-  <h2 class="m1 right inline"><%= link_to "Home", '/dashboard', class: "text-decoration-none black" %></h2>
+<nav class="m0 col-12 bg-white fixed z2">
+  <div class="ml1 left">
+    <h3 class="m0"> <%= link_to "Parks And Checks", "/dashboard", class: "text-decoration-none black" %></h3>
+  </div>
+  <div class="mr1 right dropdown">
+    <button class="dropbtn"><%= current_user.name %></button>
+    <div class="dropdown-content">
+      <p class="m0"><%= link_to 'profile', '/profile' %></p>
+      <p class="m0"><%= link_to 'logout', '/logout' %></p>
+    </div>
+  </div>
 </nav>
