@@ -10,6 +10,7 @@ class ImageSearchService
 
   def get_images
     conn = Faraday.new("https://developer.nps.gov/api/v1/parks")
+
     response = conn.get do |req|
       req.params["api_key"] = ENV["NPS_API_KEY"]
       req.params["parkcode"] = File.read("./app/data/parkcodes.csv")
