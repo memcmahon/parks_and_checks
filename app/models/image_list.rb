@@ -9,7 +9,14 @@ class ImageList
   def create_images(info)
     images = info.map do |park|
       park[:images].map do |image|
-        Image.new(park[:name], park[:url], image)
+        Image.create(park: park[:name],
+                     park_url: park[:url],
+                     credit: image[:credit],
+                     alt_text: image[:altText],
+                     title: image[:title],
+                     caption: image[:caption],
+                     url: image[:url],
+                     nps_id: image[:id])
       end
     end.flatten
   end
