@@ -21,7 +21,6 @@ gem 'figaro'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 gem 'font-awesome-rails'
 gem 'stripe'
-gem 'sidekiq-scheduler'
 
 
 group :development, :test do

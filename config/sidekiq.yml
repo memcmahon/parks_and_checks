@@ -1,4 +1,0 @@
-:schedule:
-  api_call:
-    cron: '59 23 * * * *'
-    class: ImageGrabber
