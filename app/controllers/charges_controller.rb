@@ -4,24 +4,12 @@ class ChargesController < ApplicationController
   end
 
   def create
-    @amount = 500
-
-    customer = Stripe::Customer.create(
-      :email => params[:stripeEmail],
-      :source => params[:stripeToken]
-    )
-
-    charge = Stripe::Charge.create(
-      :customer => customer.id,
-      :amount => @amount,
-      :description => params[:description],
-      :currency => 'usd'
-    )
+    CreateChargeJob.perform_later(500, params[:stripeEmail], params[:stripeToken], params[:description])
 
     redirect_to dashboard_path
 
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to new_charge_path
+  # rescue Stripe::CardError => e
+  #   flash[:error] = e.message
+  #   redirect_to new_charge_path
   end
 end
