@@ -1,5 +1,9 @@
 class DashboardController < ApplicationController
   def index
-    @images = Image.all.sample(20)
+    if params[:park]
+      @images = Image.where(park: params[:park])
+    else
+      @images = Image.all.sample(20)
+    end
   end
 end
