@@ -28,7 +28,7 @@ p {
 
     }
 .spacer {
-  height: 5em;
+  height: 4em;
 }
 
 .icon-box {
@@ -117,4 +117,10 @@ p {
 
 .dropdown:hover .dropbtn {
     background-color: #E7EBF1;
+}
+
+.search-text {
+  width: 200px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }

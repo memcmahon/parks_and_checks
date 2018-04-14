@@ -3,6 +3,16 @@
 
 </section>
 
+<div class="col-6 mx-auto">
+  <div class="center mb1">
+
+    <%= form_tag dashboard_path, method: :get do %>
+      <%= text_field_tag "park", nil, placeholder: "Search Images by Park Name", class: "mb1 search-text"%>
+    <% end %>
+    <%= link_to "Random Images", dashboard_path, class: "col-9 search-text text-decoration-none black" %>
+  </div>
+</div>
+
 <section class="m0 images col-6 mx-auto">
   <% @images.each do |image| %>
     <div class="mb1 p1 rounded image bg-soft-white">
