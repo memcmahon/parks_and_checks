@@ -9,8 +9,6 @@ describe "As a user" do
 
       visit '/dashboard'
 
-      # save_and_open_page
-
       within(".images") do
         expect(page).to have_css(".image", count: 20)
       end
