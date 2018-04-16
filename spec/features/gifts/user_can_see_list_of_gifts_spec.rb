@@ -6,16 +6,14 @@ describe "As a user" do
       user = create(:user)
       gifts = create_list(:gift, 5, user: user)
 
-      binding.pry
-
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       visit '/gifts'
 
-      expect(page).to have_content("total donations: $25.00")
+      expect(page).to have_content("Total Donations: $25.00")
 
       within('.gifts') do
-        expect(page).to have_css('image', count: 5)
+        expect(page).to have_css('.image', count: 5)
       end
     end
   end
