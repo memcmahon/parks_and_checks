@@ -5,6 +5,7 @@
   <div class="mr1 right dropdown">
     <button class="dropbtn"><%= current_user.name %></button>
     <div class="dropdown-content">
+      <p class="m0"><%= link_to 'home', '/dashboard' %></p>
       <p class="m0"><%= link_to 'profile', '/profile' %></p>
       <p class="m0"><%= link_to 'logout', '/logout' %></p>
     </div>
