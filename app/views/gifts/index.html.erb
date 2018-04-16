@@ -1,1 +1,32 @@
 <%= render partial: './navbar' %>
+
+<section class="spacer">
+
+</section>
+
+<h2 class="center">Total Donations: <%= @total_donations %></h2>
+
+<!-- <div class="col-6 mx-auto">
+  <div class="center mb1">
+
+    <%= form_tag dashboard_path, method: :get do %>
+      <%= text_field_tag "park", nil, placeholder: "Search Images by Park Name", class: "mb1 search-text"%>
+    <% end %>
+    <%= link_to "Random Images", dashboard_path, class: "col-9 search-text text-decoration-none black" %>
+  </div>
+</div> -->
+
+<section class="m0 gifts col-6 mx-auto">
+  <% current_user.gifts.each do |gift| %>
+    <div class="mb1 p1 rounded image bg-soft-white">
+      <h2 class="m0 center block"><%=link_to gift.image.park, gift.image.park_url, target: :_blank, class: "text-decoration-none black" %></h2>
+      <div class="gift-wrapper">
+        <%= image_tag "#{gift.image.url}", class: "mx-auto block med-image rounded" %>
+        <!-- <div class="centered">
+          <h2><%= link_to fa_icon("dollar", class: "big-icon center"), new_charge_path(park: "#{gift.image.park}"), class: "text-decoration-none black", id: "give" %></h2>
+        </div> -->
+      </div>
+      <p class="m1 center block"><%= gift.image.caption %></p>
+    </div>
+  <% end %>
+</section>
