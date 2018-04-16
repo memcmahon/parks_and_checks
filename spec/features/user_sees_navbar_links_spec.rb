@@ -10,44 +10,33 @@ describe "As a user" do
     end
 
     it "they can visit profile" do
-      click_on "#{@user.name}"
+      click_on "profile"
 
       expect(current_path).to eq('/profile')
-      expect(page).to have_link('Home')
-      expect(page).to have_link('Favorites')
-      expect(page).to have_link('Gifts')
-      expect(page).to have_link('logout')
-    end
-
-    it "they can visit favorites" do
-      click_on "Favorites"
-
-      expect(current_path).to eq('/favorites')
-      expect(page).to have_link('Home')
-      expect(page).to have_link("#{@user.name}")
-      expect(page).to have_link('Gifts')
+      expect(page).to have_link('home')
+      expect(page).to have_link('gifts')
       expect(page).to have_link('logout')
     end
 
     it "they can visit gifts" do
-      click_on "Gifts"
+      click_on "gifts"
 
       expect(current_path).to eq('/gifts')
-      expect(page).to have_link('Home')
-      expect(page).to have_link("#{@user.name}")
-      expect(page).to have_link('Favorites')
+      expect(page).to have_link('home')
+      expect(page).to have_link("profile")
+      expect(page).to have_link('gifts')
       expect(page).to have_link('logout')
     end
 
     it "they can visit dashboard" do
       visit '/profile'
 
-      click_on "Home"
+      click_on "home"
 
       expect(current_path).to eq('/dashboard')
-      expect(page).to have_link('Gifts')
-      expect(page).to have_link("#{@user.name}")
-      expect(page).to have_link('Favorites')
+      expect(page).to have_link('gifts')
+      expect(page).to have_link("profile")
+      expect(page).to have_link('home')
       expect(page).to have_link('logout')
     end
   end
