@@ -20,7 +20,7 @@
       <div class="gift-wrapper">
         <%= image_tag "#{image.url}", class: "mx-auto block med-image rounded" %>
         <div class="centered">
-          <h2><%= link_to fa_icon("dollar", class: "big-icon center"), new_charge_path(park: "#{image.park}"), class: "text-decoration-none black", id: "give" %></h2>
+          <h2><%= link_to fa_icon("dollar", class: "big-icon center"), new_charge_path(park: "#{image.park}", url: "#{image.url}"), class: "text-decoration-none black", id: "give" %></h2>
         </div>
       </div>
       <p class="m1 center block"><%= image.caption %></p>
