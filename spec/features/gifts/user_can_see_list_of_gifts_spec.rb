@@ -4,7 +4,9 @@ describe "As a user" do
   describe "when I visit /gifts" do
     it "I can see a list of gifts that I have made" do
       user = create(:user)
-      gifts = create_list(:gifts, 5)
+      gifts = create_list(:gift, 5, user: user)
+
+      binding.pry
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
