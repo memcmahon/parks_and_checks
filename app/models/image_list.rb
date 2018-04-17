@@ -9,19 +9,20 @@ class ImageList
   def create_images(info)
     images = info.map do |park|
       park[:images].map do |image|
-        unless image[:url].include?(" ")
-          response = Faraday.get(image[:url])
-          if response.status == 200 && response.body.size < 20971520
-            Image.find_or_create_by(park: park[:name],
-                         park_url: park[:url],
-                         credit: image[:credit],
-                         alt_text: image[:altText],
-                         title: image[:title],
-                         caption: image[:caption],
-                         url: Cloudinary::Uploader.upload(image[:url], transformation: [{:width=>500}])["secure_url"],
-                         nps_id: image[:id])
-          end
-        end
+        url = begin
+                Cloudinary::Uploader.upload(image[:url], transformation: [{width: 1000, crop: :fit}])["secure_url"]
+              rescue CloudinaryException
+                next
+              end
+
+        Image.find_or_create_by(park: park[:name],
+                     park_url: park[:url],
+                     credit: image[:credit],
+                     alt_text: image[:altText],
+                     title: image[:title],
+                     caption: image[:caption],
+                     url: url,
+                     nps_id: image[:id])
       end
     end.flatten
   end
