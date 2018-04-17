@@ -12,7 +12,7 @@ class ImageList
         unless image[:url].include?(" ")
           response = Faraday.get(image[:url])
           if response.status == 200 && response.body.size < 20971520
-            Image.create(park: park[:name],
+            Image.find_or_create_by(park: park[:name],
                          park_url: park[:url],
                          credit: image[:credit],
                          alt_text: image[:altText],
