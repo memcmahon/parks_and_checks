@@ -9,7 +9,8 @@ class ImageList
   def create_images(info)
     images = info.map do |park|
       park[:images].map do |image|
-        if Faraday.get(image[:url]).status == 200
+        response = Faraday.get(image[:url])
+        if response.status == 200 && response.size < 20971520
           Image.create(park: park[:name],
                        park_url: park[:url],
                        credit: image[:credit],
