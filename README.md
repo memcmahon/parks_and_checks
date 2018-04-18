@@ -1,24 +1,25 @@
-# README
+# Parks and Checks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app exists to help the National Park Service(NPS) collect donations.  It allows users to give donations in $5 increments based on photos managed by the NPS.
 
-Things you may want to cover:
+The app leverages the NPS Api, Google OAuth, Sidekiq/Redis, and Heroku sheduler.
 
-* Ruby version
+## Setup
 
-* System dependencies
+`$ git clone https://github.com/memcmahon/parks_and_checks.git`
 
-* Configuration
+`$ cd parks_and_checks`
 
-* Database creation
+`$ bundle`
 
-* Database initialization
+The next step may take a few minutes - 
+`$ rails db:create db:migrate`
 
-* How to run the test suite
+`$ rake grab_images`
 
-* Services (job queues, cache servers, search engines, etc.)
+to run locally:
+`$ rails s`
 
-* Deployment instructions
+## Requirements
 
-* ...
+This app requires ruby version 2.4 or greater.
