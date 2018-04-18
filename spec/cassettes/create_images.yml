@@ -1,0 +1,219 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.cloudinary.com/v1_1/memcmahon/image/upload
+    body:
+      encoding: UTF-8
+      string: timestamp=1524064837&transformation=c_fit%2Cw_1000&file=https%3A%2F%2Fwww.nps.gov%2Fcommon%2Fuploads%2Fstructured_data%2F3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg&signature=0aee3bac33cecb70ed5407ad58c85e12753b31cb&api_key=686285636571875
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - CloudinaryRuby/1.9.1
+      Content-Length:
+      - '235'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - api.cloudinary.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 18 Apr 2018 15:20:38 GMT
+      Etag:
+      - W/"dec38458a31139ad2da00df3f4aabcd2"
+      Server:
+      - cloudinary
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - 44f02bba86429372
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAwAAAP//tJDLctwgEEX/hbU0AiEE0i7z8BdklZRLhaAlkaBHECiecvnf3fYsvMk2u+7m9L3NfSVb6r0znbOkJellsy/p2I8UeIyHSuHPb5KRA8Lu1oW0TJQVrSvFZUZ2Ny46pgC4p+3Ae15Txa1oGqDWUADZ1ABUVaLvLedSmEGh1l9n44RKlNKMTODGKZJW1DwjwxpmjQ35tY0IBtjXFAx08b59eLhZj4BzE0BHsN0nWlKmclrlTH1noi1py+UPZKIed9L+fM5If4+AJeOMU4YPD620+VVbBAFJ7KEWYpClZaruwfRKS86sNqLh+BteNUhuXhuYVm8hkHbQfoeMpOBxeYpxa4sC7z0ZvybrFh3uJ7POxQyzmfW0LsXn8cXDtji+Yiz+lfjpEcAOBtPtvkz2/+GyBjeilu8G52HR80c8/CLPlfh2y9n1qvKzZOecnuXthile5PXpUj4J8vYOAAD//wMAHytvXDoCAAA=
+    http_version: 
+  recorded_at: Wed, 18 Apr 2018 15:20:38 GMT
+- request:
+    method: post
+    uri: https://api.cloudinary.com/v1_1/memcmahon/image/upload
+    body:
+      encoding: UTF-8
+      string: timestamp=1524064838&transformation=c_fit%2Cw_1000&file=https%3A%2F%2Fwww.nps.gov%2Fcommon%2Fuploads%2Fstructured_data%2F3C7B4BEC-1DD8-B71B-0B2CF833F93140FF.jpg&signature=5c80b6f8917984d41d4a2fb3d2eec66d434c7235&api_key=686285636571875
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - CloudinaryRuby/1.9.1
+      Content-Length:
+      - '235'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - api.cloudinary.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 18 Apr 2018 15:20:41 GMT
+      Etag:
+      - W/"3a4329139c30c3d53052af32121333f5"
+      Server:
+      - cloudinary
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - 8ba2eccd7d547859
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '366'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA7SQy3KcMBBF/0VrGPTktWSc+YKs7EpRjWiBbIEoIewap/LvEZ6FN9lmp8fpc7vub7Idg7O6tyNpCb6tav5cgvqM5q1+/VgBIsnIO4bd+pW0THFJS1mLJiO7nVaIR8A0x4RA4IYrzQYjQSkNsioHKWSlWFmWdTMMnEpIrg87xjmZKKUZmdFOczy95834sKS8lrxuUyID7v4IGvt4384Qu8CE6V0HhIhj/4VyyuqcypzVP5lqOW1F85yYCNNO2pdfGRnuEdNRlFw1Zfp4uI7NeRgTiIk8NYaCZpWoQAowyvDGAELVCDbwmkuZyM2Bxtm7EQNpDbgdM3IEl4bnGLe2KNK+F+38MdoVwv2i/VIsuOgFZr8WX8sXj9ji/bvH4l+VXx4F7KhTvf13yP4/UnywU3K53liHKyxnPeJadbL7cc3Z01OddxXrctrx660W4pY6kfR2I3/+AgAA//8DAAKnJEE7AgAA
+    http_version: 
+  recorded_at: Wed, 18 Apr 2018 15:20:41 GMT
+- request:
+    method: post
+    uri: https://api.cloudinary.com/v1_1/memcmahon/image/upload
+    body:
+      encoding: UTF-8
+      string: timestamp=1524064841&transformation=c_fit%2Cw_1000&file=https%3A%2F%2Fwww.nps.gov%2Fcommon%2Fuploads%2Fstructured_data%2F3C79850F-1DD8-B71B-0BC4A88BA85DE6B0.jpg&signature=8ccc4ce5dec51e9d47c683c9e9b8ddc0d0ffedf5&api_key=686285636571875
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - CloudinaryRuby/1.9.1
+      Content-Length:
+      - '235'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - api.cloudinary.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 18 Apr 2018 15:20:42 GMT
+      Etag:
+      - W/"17d18e7630866dae06ecb4c74373b71d"
+      Server:
+      - cloudinary
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - e32196f04657caa9
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '365'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA7RQy3KkIBT9F9baAqKgu5hOviCrTKUsnkoKxSB2qis1/57b6UU2s50d997z4nyh7VDB69Eb1KOrdBfVisuHWFmY9mTlIlCBLjbtPq6oJw1luGWCkQLtflplPpIFnhNt2zbUSFI7ylVDFGWOmpo7clu6DquO8YaB1qc3eQYljHGBZuunOaMeyAVyMS0SBvS+TQBMdo9H0nbM1+3m4Rc5WdhrSJWtGX+gFBNRYlYS8UKanuKekVfAZDntqP/zViB1zRaepCas7uBw1zq2EKUBoAUkzJ3E0pKOM14rwVuqa8ypo9RophT8GJBbkNrOMRibUO9k2G2BjhSAPOe89VUFeU86xMP4VabrScelWuyiFznHtfoJX91tq8tvjdW/Gj/dC9ithnbHX5P9f7jE5CfQCqPzwa5yudVTP/JONPi5JOezKAdOhhIPj+xBiOFBNOendsDo7zcAAAD//wMAyG2wrDoCAAA=
+    http_version: 
+  recorded_at: Wed, 18 Apr 2018 15:20:42 GMT
+- request:
+    method: post
+    uri: https://api.cloudinary.com/v1_1/memcmahon/image/upload
+    body:
+      encoding: UTF-8
+      string: timestamp=1524064842&transformation=c_fit%2Cw_1000&file=https%3A%2F%2Fwww.nps.gov%2Fcommon%2Fuploads%2Fstructured_data%2F3C7A0DE5-1DD8-B71B-0BFBE720788EF4A3.jpg&signature=1f69b6a30cc42ac3836b4771d3a1b6477b717305&api_key=686285636571875
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - CloudinaryRuby/1.9.1
+      Content-Length:
+      - '235'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - api.cloudinary.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 18 Apr 2018 15:20:46 GMT
+      Etag:
+      - W/"5b0f374e274de3cc727c2cb440a117dc"
+      Server:
+      - cloudinary
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - 1dae975e10cfdcf7
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '369'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA7SQzW6kMBCE38VnGPw3GLhldiZPkFNWETKmDV4ZzNgm0WiVd09PEimXve7NbX1dVV1/ybYP3pnejaQjKXFg8u12heEa7DW10UlSkFeIyYWVdOzIJa1lI2VBkptWnfcIuMc18EFZM/AaDG2ltSAECCVtXVPa0BFE3Yp2RK03N+YZlSilBZnBTXMmnWqPBbEhLhoH8mebEIyQwh4N9Pm23T3coifAfxNBZxj7T5RT1pRUlqx5YseO007KZ2SynhLpfr8UZLhlwCcTTSvR41tr33zQ9zSAJM6irgetKAwSbxiM5FIJqlthNRitOENy89rAHPwIkXRW+wQF2aPH5TnnrasqzHswPuyjW3W8HUxYqgUWs+g5rNVn+OrLtnr9qbH6V+OHrwISGGy3/zFJ/8MlRDehlu+t87Dq5V6P+KUe6PlyLNn53JQnxU4lPT2eLopT1TSXR/kgyPsHAAAA//8DAFhht4k6AgAA
+    http_version: 
+  recorded_at: Wed, 18 Apr 2018 15:20:46 GMT
+recorded_with: VCR 4.0.0

@@ -36,6 +36,9 @@ end
 
 group :test do
   gem 'simplecov'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'stripe-ruby-mock', '~> 2.5.3'
 end
 
 group :development do

@@ -1,5 +1,5 @@
 class ImageList
-  attr_reader :images
+  attr_reader :images, :total
 
   def initialize(info)
     @total = info[:total]
