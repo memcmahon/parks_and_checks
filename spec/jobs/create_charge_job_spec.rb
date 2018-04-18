@@ -1,7 +1,12 @@
 require "rails_helper"
+require "stripe_mock"
 
 RSpec.describe CreateChargeJob, :type => :job do
   describe "#perform_later" do
+    let(:stripe_helper) { StripeMock.create_test_helper }
+    before { StripeMock.start }
+    after { StripeMock.stop }
+
     it "creates a charge in the queue" do
       ActiveJob::Base.queue_adapter = :test
       expect {
