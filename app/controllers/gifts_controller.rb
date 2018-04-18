@@ -1,5 +1,5 @@
 class GiftsController < ApplicationController
   def index
-    @total_donations = GiftPresenter.total_donations(current_user)
+    @gifts = GiftPresenter.new(current_user, params[:park])
   end
 end
