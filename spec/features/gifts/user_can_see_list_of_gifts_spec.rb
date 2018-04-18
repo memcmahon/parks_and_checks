@@ -16,5 +16,23 @@ describe "As a user" do
         expect(page).to have_css('.image', count: 5)
       end
     end
+
+    it "I can filter gifts by park" do
+      user = create(:user)
+      image = create(:image, park: "Yellowstone")
+      gifts = create_list(:gift, 2, user: user, image: image)
+      gifts = create_list(:gift, 3, user: user)
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+      visit '/gifts?park=yellow'
+
+      expect(page).to have_content("Total Donations: $25.00")
+
+      within('.gifts') do
+        expect(page).to have_content("Yellowstone", count: 1)
+        expect(page).to_not have_content("JellyStone")
+      end
+    end
   end
 end
