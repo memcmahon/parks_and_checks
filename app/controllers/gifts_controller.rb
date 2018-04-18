@@ -1,6 +1,5 @@
 class GiftsController < ApplicationController
   def index
-    cents_donated = current_user.gifts.pluck(:amount).sum
-    @total_donations = ActionController::Base.helpers.number_to_currency(cents_donated/100)
+    @total_donations = GiftPresenter.total_donations(current_user)
   end
 end
