@@ -20,13 +20,11 @@ describe "As a user" do
       other_images = create_list(:image, 5)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      visit '/dashboard'
-
-      fill_in "park", with: "Yellowstone"
+      visit '/dashboard?park=Yellowstone'
 
       within(".images") do
         expect(page).to have_content("Yellowstone", count: 10)
-        expect(page).to_not have_content("Jellystone")
+        expect(page).to_not have_content("JellyStone")
       end
     end
   end
