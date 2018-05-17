@@ -1,6 +1,8 @@
 # Parks and Checks
 
-This app exists to help the National Park Service(NPS) collect donations.  It allows users to give donations in $5 increments based on photos managed by the NPS.
+Deployed on Heroku: [Parks and Checks](http://parksandchecks.herokuapp.com/)
+
+This app exists to help the National Park Service(NPS) collect donations.  It allows users to give donations in $5 increments based on photos managed by the NPS. This was an individual project completed over 2.5 weeks.  One of the biggest takeaways from this project was the use of Sidekiq to queue and process slow-running functions.  It also gave me a taste of CDN usage for increased speed.
 
 The app leverages the NPS Api, Google OAuth, Sidekiq/Redis, and Heroku sheduler.
 
